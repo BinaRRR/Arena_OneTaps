@@ -1,0 +1,13 @@
+"1s2k_onetaps"
+{
+    "Wait"
+    {
+        "en"    "Wait..."
+        "pl"    "Czekaj..."
+    }
+    "Shoot"
+    {
+        "en"    "Shoot!"
+        "pl"    "Strzelaj!"
+    }
+}
