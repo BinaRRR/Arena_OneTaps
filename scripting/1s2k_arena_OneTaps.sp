@@ -33,7 +33,7 @@ public Plugin myinfo =
 public void OnPluginStart() {
     HookEvent("weapon_fire", Event_WeaponFire, EventHookMode_Post);
     cv_shotFrequency = CreateConVar("1s2k_shotFrequency", "1.0", "Częstotliwość strzału", _, true, 0.1, false);
-    LoadTranslations("1s2k_onetaps");
+    LoadTranslations("1s2k_customrounds");
 }
 
 public void OnMapStart() {

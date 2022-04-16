@@ -10,4 +10,15 @@
         "en"    "Shoot!"
         "pl"    "Strzelaj!"
     }
+    "NoCrosshair"
+    {
+        "en"    "No crosshair round."
+        "pl"    "Runda bez celownika"
+    }
+	"FeetOnly"
+	{
+		"en" 	"Shoot feet only round"
+		"pl"	"Strzelaj tylko w stopy"
+	}
+    
 }
