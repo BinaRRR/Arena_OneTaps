@@ -52,7 +52,7 @@ public void Multi1v1_OnRoundTypesAdded() {
 
 public void OneTapsHandler(int client) {
     inOneTap[client] = true;
-    ShowShootHud(client);
+    CreateTimer(3.0, ShowHud, GetClientUserId(client));
     StripWeapons(client);
     GivePlayerItem(client, "weapon_knife");
     Client_GiveWeaponAndAmmo(client, "weapon_ak47", true, 0, 0, 1, 0);
@@ -81,8 +81,16 @@ public Action Event_WeaponFire(Event e, const char[] name, bool dontBroadcast) {
     int client = GetClientOfUserId(e.GetInt("userid"));
     if (inOneTap[client]) {
         ammoTimer[client] = CreateTimer(1.0, Timer_Shot, GetClientUserId(client));
-        ShowWaitHud(client);
+        ShowWaitHud(GetClientUserId(client));
     }
+}
+
+public Action ShowHud(Handle timer, any userid) {
+    int client = GetClientOfUserId(userid);
+    if (client == 0)
+		return Plugin_Continue;
+    ShowShootHud(client);
+    return Plugin_Continue;
 }
 
 void ShowShootHud(int client) {
